@@ -6,6 +6,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * 使用http发送请求
+ * @作者 jinkun
+ * @时间 2015年3月21日 上午10:02:28
+ */
 public class HttpUtil {
 	
 	public static void sendHttpRequest(final String address,

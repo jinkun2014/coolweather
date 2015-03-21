@@ -75,11 +75,11 @@ public class ChooseAreaActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.choose_area);
-		isFromWeatherActivity = getIntent().getBooleanExtra("from_weather_ activity", false);
+		isFromWeatherActivity = getIntent().getBooleanExtra("from_weather_activity", false);
 
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		// 已经选择了城市且不是从WeatherActivity跳转过来，才会直接跳转到WeatherActivity
-		if (prefs.getBoolean("city_selected", false)&& !isFromWeatherActivity) {
+		if (prefs.getBoolean("city_selected", false) && !isFromWeatherActivity) {
 			Intent intent = new Intent(this, WeatherActivity.class);
 			startActivity(intent);
 			finish();
@@ -223,8 +223,7 @@ public class ChooseAreaActivity extends Activity {
 					@Override
 					public void run() {
 						closeProgressDialog();
-						Toast.makeText(ChooseAreaActivity.this,
-										"加载失败", Toast.LENGTH_SHORT).show();
+						Toast.makeText(ChooseAreaActivity.this,"加载失败", Toast.LENGTH_SHORT).show();
 					}
 				});
 			}

@@ -99,7 +99,7 @@ public class WeatherActivity extends Activity implements OnClickListener{
 			break;
 		case R.id.refresh_weather:
 			publishText.setText("Í¬²½ÖÐ...");
-			SharedPreferences prefs = PreferenceManager. getDefaultSharedPreferences(this);
+			SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 			String weatherCode = prefs.getString("weather_code", "");
 			if (!TextUtils.isEmpty(weatherCode)) {
 				queryWeatherInfo(weatherCode);
